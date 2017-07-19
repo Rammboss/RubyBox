@@ -15,6 +15,8 @@ class StepsController < ApplicationController
   # GET /steps/new
   def new
     @step = Step.new
+    value = %x( python /home/pi/myProject/Box/src/Main.py )
+    render :text => value
   end
 
   # GET /steps/1/edit
